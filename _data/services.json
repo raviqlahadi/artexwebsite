@@ -1,0 +1,9 @@
+{
+  "title": "Layanan Kami",
+  "description": "Berikut layanan utama yang kami tawarkan untuk Anda:",
+  "list": [
+    {"name": "Sablon Kaos", "description": "Cetak kaos dengan desain custom berkualitas tinggi."},
+    {"name": "Pembuatan Seragam", "description": "Seragam kerja, sekolah, atau komunitas sesuai permintaan."},
+    {"name": "Kaos Olahraga", "description": "Kaos olahraga untuk tim dengan bahan nyaman dan desain menarik."}
+  ]
+}

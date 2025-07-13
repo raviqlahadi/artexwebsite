@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <!-- Favicon SVG -->
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+  <!-- Fallback Old Browser -->
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/flowbite@2.2.1/dist/flowbite.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style> html { scroll-behavior: smooth; } </style>
+</head>
+<body class="bg-white text-gray-900">
+  {% include "navbar.njk" %}
+  {% block content %}{% endblock %}
+  {% include "footer.njk" %}
+
+  <a href="https://wa.me/6281234567890?text=Halo%20Artex,%20saya%20tertarik%20dengan%20layanan%20Anda"
+     target="_blank" aria-label="Chat via WhatsApp"
+     class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-6 h-6 fill-white">
+      <path d="M16.002 3C9.376 3 ... z" />
+    </svg>
+  </a>
+  <script src="https://unpkg.com/flowbite@2.2.1/dist/flowbite.min.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

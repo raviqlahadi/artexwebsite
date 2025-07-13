@@ -1,0 +1,12 @@
+<section id="projects" class="bg-white py-20">
+  <div class="max-w-screen-xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8">{{ projects.title }}</h2>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {% for project in projects.list %}
+      <div class="bg-gray-100 rounded-lg h-48 flex items-center justify-center text-gray-400">
+        {{ project.name }}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

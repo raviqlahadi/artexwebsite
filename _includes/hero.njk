@@ -1,0 +1,47 @@
+<section x-data="heroSlider()" x-init="start()" class="relative">
+  <!-- Background Slider for Desktop -->
+  <template x-for="(image, index) in images" :key="index">
+    <div x-show="current === index" x-transition:fade class="absolute inset-0 hidden md:block">
+      <img :src="image" alt="Hero Background" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+  </template>
+
+  <!-- Mobile Image -->
+  <div class="md:hidden">
+    <img :src="images[current]" alt="Hero Mobile" class="w-full h-64 object-cover">
+  </div>
+
+  <!-- Foreground Content -->
+  <div class="flex flex-col justify-center items-center text-center px-4 sm:px-8 md:px-16 lg:px-24 py-8 md:py-0 md:text-left md:items-start md:h-screen relative">
+    <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-tight text-gray-900 md:text-white md:text-5xl">
+      {{ hero.title }}
+    </h1>
+    <p class="mb-6 text-base text-gray-700 md:text-white md:text-lg max-w-2xl">
+      {{ hero.description }}
+    </p>
+    <a href="https://wa.me/{{ site.whatsapp }}" target="_blank"
+      class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-green-500 rounded-lg hover:bg-green-600">
+      <i class="fab fa-whatsapp"></i>
+      Hubungi via WhatsApp
+    </a>
+  </div>
+</section>
+
+<script>
+  function heroSlider() {
+  return {
+    images: [
+      '/assets/images/hero1.jpg',
+      '/assets/images/hero2.jpg',
+      '/assets/images/hero3.jpg',
+    ],
+    current: 0,
+    start() {
+      setInterval(() => {
+        this.current = (this.current + 1) % this.images.length;
+      }, 4000);
+    }
+  }
+}
+</script>

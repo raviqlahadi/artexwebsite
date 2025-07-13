@@ -1,0 +1,28 @@
+{
+  "name": "artexwebsite",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raviqlahadi/artexwebsite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raviqlahadi/artexwebsite/issues"
+  },
+  "homepage": "https://github.com/raviqlahadi/artexwebsite#readme",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.4"
+  }
+}

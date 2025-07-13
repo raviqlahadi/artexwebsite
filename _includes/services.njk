@@ -1,0 +1,14 @@
+<section id="services" class="bg-gray-50 py-20">
+  <div class="max-w-screen-xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8">{{ services.title }}</h2>
+    <p class="text-gray-600 mb-6 max-w-2xl mx-auto">{{ services.description }}</p>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      {% for item in services.list %}
+      <div class="bg-white rounded-lg shadow p-6 text-left">
+        <h3 class="text-xl font-semibold mb-2">{{ item.name }}</h3>
+        <p class="text-gray-600">{{ item.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

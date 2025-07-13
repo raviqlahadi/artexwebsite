@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artex Industri</title>
+  <!-- Favicon SVG -->
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+  <!-- Fallback Old Browser -->
+  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/flowbite@2.2.1/dist/flowbite.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style> html { scroll-behavior: smooth; } </style>
+</head>
+<body class="bg-white text-gray-900">
+  <nav class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <div class="flex items-center">
+      <img src="/assets/img/logo.svg" alt="Artex Industri Logo" class="h-10 w-auto">
+      <span class="ml-2 text-lg font-bold text-gray-800">Artex Industri</span>
+    </div>
+    <button data-collapse-toggle="navbar-menu" type="button"
+      class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none"
+      aria-controls="navbar-menu" aria-expanded="false">
+      <span class="sr-only">Toggle menu</span>
+      <i data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+    <div class="hidden w-full md:flex md:w-auto md:items-center md:space-x-6 text-sm font-medium text-gray-700" id="navbar-menu">
+      <ul class="flex flex-col mt-4 md:flex-row md:mt-0 space-y-2 md:space-y-0 md:space-x-6">
+        
+          <li><a href="#about" class="block hover:text-blue-600">Tentang Kami</a></li>
+        
+          <li><a href="#services" class="block hover:text-blue-600">Layanan</a></li>
+        
+          <li><a href="#projects" class="block hover:text-blue-600">Proyek</a></li>
+        
+          <li><a href="#contact" class="block hover:text-blue-600">Kontak</a></li>
+        
+      </ul>
+    </div>
+   <div class="hidden md:flex md:order-2">
+    <a href="https://wa.me/6281234567890?text=Halo%20Artex,%20saya%20tertarik%20dengan%20layanan%20Anda" target="_blank"
+      class="flex items-center gap-2 text-white bg-green-500 hover:bg-green-600 font-medium rounded-lg text-sm px-4 py-2">
+      <i class="fab fa-whatsapp text-lg"></i> WhatsApp Kami
+    </a>
+  </div>
+  </div>
+</nav>
+
+  
+  <section x-data="heroSlider()" x-init="start()" class="relative">
+  <!-- Background Slider for Desktop -->
+  <template x-for="(image, index) in images" :key="index">
+    <div x-show="current === index" x-transition:fade class="absolute inset-0 hidden md:block">
+      <img :src="image" alt="Hero Background" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+  </template>
+
+  <!-- Mobile Image -->
+  <div class="md:hidden">
+    <img :src="images[current]" alt="Hero Mobile" class="w-full h-64 object-cover">
+  </div>
+
+  <!-- Foreground Content -->
+  <div class="flex flex-col justify-center items-center text-center px-4 sm:px-8 md:px-16 lg:px-24 py-8 md:py-0 md:text-left md:items-start md:h-screen relative">
+    <h1 class="mb-4 text-3xl font-extrabold tracking-tight leading-tight text-gray-900 md:text-white md:text-5xl">
+      Solusi Pakaian Sablon &amp; Garment di Kendari
+    </h1>
+    <p class="mb-6 text-base text-gray-700 md:text-white md:text-lg max-w-2xl">
+      Kami menyediakan layanan pembuatan seragam, kaos olahraga, dan berbagai kebutuhan pakaian dengan kualitas terbaik.
+    </p>
+    <a href="https://wa.me/https://wa.me/6281234567890?text=Halo%20Artex,%20saya%20tertarik%20dengan%20layanan%20Anda" target="_blank"
+      class="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-white bg-green-500 rounded-lg hover:bg-green-600">
+      <i class="fab fa-whatsapp"></i>
+      Hubungi via WhatsApp
+    </a>
+  </div>
+</section>
+
+<script>
+  function heroSlider() {
+  return {
+    images: [
+      '/assets/images/hero1.jpg',
+      '/assets/images/hero2.jpg',
+      '/assets/images/hero3.jpg',
+    ],
+    current: 0,
+    start() {
+      setInterval(() => {
+        this.current = (this.current + 1) % this.images.length;
+      }, 4000);
+    }
+  }
+}
+</script>
+  <section id="about" class="bg-white py-20">
+  <div class="max-w-screen-xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Tentang Artex Industri</h2>
+    <p class="text-gray-600 max-w-2xl mx-auto">Artex Industri adalah pusat sablon dan garment terpercaya di Kendari, melayani berbagai kebutuhan pakaian untuk individu, komunitas, hingga perusahaan.</p>
+  </div>
+</section>
+
+  <section id="services" class="bg-gray-50 py-20">
+  <div class="max-w-screen-xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8">Layanan Kami</h2>
+    <p class="text-gray-600 mb-6 max-w-2xl mx-auto">Berikut layanan utama yang kami tawarkan untuk Anda:</p>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      
+      <div class="bg-white rounded-lg shadow p-6 text-left">
+        <h3 class="text-xl font-semibold mb-2">Sablon Kaos</h3>
+        <p class="text-gray-600">Cetak kaos dengan desain custom berkualitas tinggi.</p>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow p-6 text-left">
+        <h3 class="text-xl font-semibold mb-2">Pembuatan Seragam</h3>
+        <p class="text-gray-600">Seragam kerja, sekolah, atau komunitas sesuai permintaan.</p>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow p-6 text-left">
+        <h3 class="text-xl font-semibold mb-2">Kaos Olahraga</h3>
+        <p class="text-gray-600">Kaos olahraga untuk tim dengan bahan nyaman dan desain menarik.</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+  <section id="projects" class="bg-white py-20">
+  <div class="max-w-screen-xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-8">Proyek yang Telah Dikerjakan</h2>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      
+      <div class="bg-gray-100 rounded-lg h-48 flex items-center justify-center text-gray-400">
+        Seragam PT. Kendari Makmur
+      </div>
+      
+      <div class="bg-gray-100 rounded-lg h-48 flex items-center justify-center text-gray-400">
+        Kaos Event Marathon 2024
+      </div>
+      
+      <div class="bg-gray-100 rounded-lg h-48 flex items-center justify-center text-gray-400">
+        Jersey Tim Futsal Kendari
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+  <section id="contact" class="bg-blue-600 py-20 text-white text-center">
+  <div class="max-w-screen-md mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-4">Siap Memesan?</h2>
+    <p class="mb-6">Hubungi kami sekarang untuk konsultasi dan estimasi harga cepat!</p>
+    <a href="https://wa.me/6281234567890?text=Halo%20Artex,%20saya%20tertarik%20dengan%20layanan%20Anda" target="_blank"
+      class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg">
+      WhatsApp Kami
+    </a>
+  </div>
+</section>
+
+
+  <footer class="bg-gray-800 text-white py-8">
+  <div class="max-w-screen-xl mx-auto px-4 text-center">
+    <p class="text-sm">© 2025 Artex Industri. All rights reserved.</p>
+    <p class="text-xs mt-1">Email: info@artexindustri.com | Telp: +62 812-3456-7890</p>
+  </div>
+</footer>
+
+
+  <a href="https://wa.me/6281234567890?text=Halo%20Artex,%20saya%20tertarik%20dengan%20layanan%20Anda"
+     target="_blank" aria-label="Chat via WhatsApp"
+     class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-6 h-6 fill-white">
+      <path d="M16.002 3C9.376 3 ... z" />
+    </svg>
+  </a>
+  <script src="https://unpkg.com/flowbite@2.2.1/dist/flowbite.min.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>

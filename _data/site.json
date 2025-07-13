@@ -1,0 +1,13 @@
+{
+  "title": "Artex Industri",
+  "tagline": "Pusat Sablon & Garment Kendari",
+  "logo": "/assets/img/logo.svg",
+  "whatsapp": "https://wa.me/6281234567890?text=Halo%20Artex,%20saya%20tertarik%20dengan%20layanan%20Anda",
+  "whatsapp_icon": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' class='w-6 h-6 fill-white'><path d='M16.002 3C9.376 3 ... z'/></svg>",
+  "nav": [
+    {"id": "about", "label": "Tentang Kami"},
+    {"id": "services", "label": "Layanan"},
+    {"id": "projects", "label": "Proyek"},
+    {"id": "contact", "label": "Kontak"}
+  ]
+}
